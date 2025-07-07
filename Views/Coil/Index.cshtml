@@ -1,0 +1,98 @@
+﻿@model List<CoilTrackingSystem.Models.CoilData>
+
+@{
+    ViewBag.Title = "Primary Data Input";
+}
+
+<h2 style="text-align: center; color: #2e6da4;">Primary Data Input</h2>
+
+<!-- Dropdown -->
+<div style="margin-bottom: 15px;">
+    <label>Select a PDI Coil: </label>
+    <select>
+        <option>SS61513000</option>
+        <option>SS61535000</option>
+    </select>
+    <button style="background-color: #007bff; color: white;">INSERT</button>
+    <button style="background-color: #6c757d; color: white;">REFRESH</button>
+</div>
+
+<!-- Coil Data Table -->
+<table style="width: 100%; border-collapse: collapse; background-color: #f5fff5; border: 1px solid #ccc; text-align: center;">
+    <thead style="background-color: #90ee90;">
+        <tr>
+            <th>Coil No</th>
+            <th>Thickness (MM)</th>
+            <th>Width (MM)</th>
+            <th>Length (MM)</th>
+            <th>Weight (MT)</th>
+            <th>Grade</th>
+            <th>TDC</th>
+            <th>Previous Stage</th>
+            <th>Next Process</th>
+            <th>Process</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var coil in Model)
+        {
+            <tr>
+                <td>@coil.CoilNo</td>
+                <td>@coil.Thickness</td>
+                <td>@coil.Width</td>
+                <td>@coil.Length</td>
+                <td>@coil.Weight</td>
+                <td>@coil.Grade</td>
+                <td>@coil.TDC</td>
+                <td>@coil.PreviousStage</td>
+                <td>@coil.NextProcess</td>
+                <td>@coil.Process</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+
+<!-- Customer Data -->
+<h3 style="color: #2e6da4;">Customer Data</h3>
+<div style="background-color: #eafae1; padding: 10px;">
+    <input placeholder="Sales Ord" />
+    <input placeholder="ItemNo" />
+    <input placeholder="MCode" />
+    <input placeholder="Prod Desc" />
+    <input placeholder="Mark Dest" />
+    <input placeholder="Thk_tolera" />
+    <input placeholder="Wid_tolera" />
+    <input placeholder="Len_tolera" />
+    <input placeholder="Cust_Thk" />
+    <input placeholder="Cust_Len" />
+    <input placeholder="Cust_Wid" />
+</div>
+
+<!-- Quality Data -->
+<h3 style="color: #2e6da4;">Quality Data</h3>
+<div style="background-color: #eafae1; padding: 10px;">
+    <input placeholder="TDC" />
+    <input placeholder="GRADE" />
+    <input placeholder="QCode" />
+    <input placeholder="HR Chemi." />
+    <input placeholder="Fe Content" />
+    <input placeholder="Oil Concen." />
+    <input placeholder="I Unit Value" />
+    <input placeholder="Work Roll" />
+    <input placeholder="Final Pass Roll Tension" />
+</div>
+
+<!-- Coil History -->
+<h3 style="color: #2e6da4;">Coil History</h3>
+<div style="background-color: #eafae1; padding: 10px;">
+    <input placeholder="HR Coil No" />
+    <input placeholder="Thick(MM)" />
+    <input placeholder="Width(MM)" />
+    <input placeholder="CT" />
+    <input placeholder="Wedge" />
+    <input placeholder="Crown" />
+    <input placeholder="Surface Fi." />
+    <input placeholder="Source Plant" />
+</div>
