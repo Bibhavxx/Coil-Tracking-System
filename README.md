@@ -29,6 +29,7 @@ This simulation is ideal for:
 - UI mockups for industrial HMI/SCADA interfaces  
 - Concept testing for coil movement and direction logic  
 - Visualizing real-time coil status and transitions in production monitoring apps
+- To Check Position Of Coil At That Time 
 
 ---
 
@@ -47,3 +48,4 @@ To simulate coil movement between stations:
 ```javascript
 triggerRotation(3, 1); // Moves coil from station 3 to 1 (anticlockwise)
 triggerRotation(1, 2); // Moves coil from station 1 to 2 (clockwise)
+
